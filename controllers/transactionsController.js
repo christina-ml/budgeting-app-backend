@@ -1,4 +1,5 @@
 const express = require("express");
+const { redirect } = require("statuses");
 const transactionsRoutes = express.Router();
 const transactionsArr = require("../models/transactions");
 
@@ -19,7 +20,10 @@ transactionsRoutes.get(`/:id`, (req, res)=>{
     if (transactionsArr[id]) {
         res.status(200).json(transactionsArr[id]);
     } else {
-        res.status(404).json({ error: "Transaction Not Found." });
+        /* This is if a transaction at this index does not exist --> Error message here. OR, Redirect: becomes 404 error from `app.js` catch-all star `*` route*/
+        /* Re-direct gives an error: Error: Exceeded maxRedirects. Probably stuck in a redirect loop http://localhost:3005/transactions/20 */
+        res.redirect(`/bacon`);
+        // res.status(404).json({ error: "Transaction Not Found." });
     }
 })
 

@@ -19,7 +19,7 @@ app.get("/", (req, res)=>{
 });
 
 app.get("*", (req, res)=>{
-  res.status(404).json({ error: "Page not found"  }); 
+  res.status(404).json({ error: "Page not found" }); 
 });
 
 // Export
