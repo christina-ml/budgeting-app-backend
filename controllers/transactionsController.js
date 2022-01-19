@@ -9,8 +9,6 @@ transactionsRoutes.get("/", (req, res)=>{
 
 // `/transactions` CREATE-POST
 transactionsRoutes.post("/", (req, res)=>{
-    // console.log(req.body) --> what new JSON data you're adding into the transactionsArr using Postman.
-    // console.log(transactionsArr) --> This is the list of all the transactions
     transactionsArr.push(req.body);
     res.json(transactionsArr[transactionsArr.length -1]);
 })
@@ -40,7 +38,6 @@ transactionsRoutes.delete(`/:id`, (req, res)=>{
 transactionsRoutes.put(`/:id`, (req, res)=>{
     const { id } = req.params;
     let { date, name, amount, from, category } = req.body;
-
     if (!transactionsArr[id]){
         res.status(404).json({ error: "Not found. Can't update."});
         return;
