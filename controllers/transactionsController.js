@@ -16,9 +16,8 @@ transactionsRoutes.post("/", (req, res)=>{
 
 // `/transactions/:id` SHOW (same url also for: DELETE, UPDATE-PUT)
 transactionsRoutes.get(`/:id`, (req, res)=>{
-    const { id } = req.params;
-    if (transactionsArr[id]) {
-        res.status(200).json(transactionsArr[id]);
+    if (transactionsArr[req.params.id]) {
+        res.status(200).json(transactionsArr[req.params.id]);
     } else {
         /* This is if a transaction at this index does not exist --> Error message here. OR, Redirect: becomes 404 error from `app.js` catch-all star `*` route*/
         /* Re-direct gives an error: Error: Exceeded maxRedirects. Probably stuck in a redirect loop http://localhost:3005/transactions/20 */

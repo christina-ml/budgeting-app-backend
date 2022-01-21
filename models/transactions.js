@@ -2,14 +2,14 @@ module.exports = [
     {
       date: "April 1",
       name: "Groceries",
-      amount: -30,
-      from: "Ideal Supermarket",
+      amount: 30,
+      from: "Giant Supermarket",
       category: "food",
     },
     {
       date: "April 1",
       name: "Shopping",
-      amount: -47,
+      amount: -157,
       from: "Target",
       category: "shopping",
     },
@@ -23,7 +23,7 @@ module.exports = [
     {
       date: "April 5",
       name: "Gas",
-      amount: -25,
+      amount: 125,
       from: "Shell Gas Station",
       category: "transportation",
     },
