@@ -11,5 +11,7 @@
 ## Deployed Frontend Link
 [https://cl-fe-budgeting-app.netlify.app/](https://cl-fe-budgeting-app.netlify.app/)
 
-## Project Prompt
-Full Stack Budgeting App - [Project Prompt](https://github.com/joinpursuit/budgeting-app-project-prompt)
+***
+
+### Project Prompt
+[Full Stack Budgeting App - Project Prompt](https://github.com/joinpursuit/budgeting-app-project-prompt)
